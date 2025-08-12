@@ -4,7 +4,7 @@ This interactive Streamlit web application enables comprehensive comparison betw
 
 ## Key Capabilities
 
-- **Flexible Input Options**: Upload individual images, batch process multiple images, or extract and analyze entire image collections from ZIP archives ![alt text](images/cracks.png)
+- **Flexible Input Options**: Upload individual images, batch process multiple images, or extract and analyze entire image collections from ZIP archives !
 - **Advanced Model Ensemble**: Evaluate performance across five cutting-edge segmentation architectures:
     1. **CrackFusionNet**: Custom fusion architecture combining UNet and FPN approaches
     2. **UnetSEResnet50**: U-Net architecture enhanced with Squeeze-and-Excitation ResNet50 encoder
