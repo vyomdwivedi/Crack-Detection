@@ -44,7 +44,7 @@ class UnetSEResnet50(nn.Module):
             classes=1,
             activation=None
         )
-        encoder_weights = torch.load('se_resnet50-ce0d4300.pth', map_location='cpu')
+        encoder_weights = torch.load('Models/se_resnet50-ce0d4300.pth', map_location='cpu')
         self.architecture.encoder.load_state_dict(encoder_weights)
 
     def forward(self, images):
@@ -110,11 +110,11 @@ def load_all_models():
         "FPN": FPN().to('cpu')
     }
     
-    models["CrackFusionNet"].load_state_dict(torch.load('Copy of FPUNet_best_IoU_67.pth', map_location='cpu'))
-    models["UnetSEResnet50"].load_state_dict(torch.load('Unet_model_epoch_9.pt', map_location='cpu'))
-    models["UnetPlusPlusResNet18"].load_state_dict(torch.load('UNetPPbest_model_epoch_40.pt', map_location='cpu'))
-    models["DeepLabV3+"].load_state_dict(torch.load('DeepLabV3Plus.pt', map_location='cpu'))
-    models["FPN"].load_state_dict(torch.load('FPN.pt', map_location='cpu'))
+    models["CrackFusionNet"].load_state_dict(torch.load('Models/Copy of FPUNet_best_IoU_67.pth', map_location='cpu'))
+    models["UnetSEResnet50"].load_state_dict(torch.load('Models/Unet_model_epoch_9.pt', map_location='cpu'))
+    models["UnetPlusPlusResNet18"].load_state_dict(torch.load('Models/UNetPPbest_model_epoch_40.pt', map_location='cpu'))
+    models["DeepLabV3+"].load_state_dict(torch.load('Models/DeepLabV3Plus.pt', map_location='cpu'))
+    models["FPN"].load_state_dict(torch.load('Models/FPN.pt', map_location='cpu'))
 
     for model in models.values():
         model.eval()
